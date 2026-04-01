@@ -15,32 +15,48 @@
     <link rel="icon" type="image/png" href="Foto/logo.png">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
     <style>
-        /* Fundal închis pentru vibe-ul de Melodic House */
         body {
-            background-color: #0d0d0d;
-            color: #ffffff;
-            font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+    		background-color: #0d0d0d; 	/* Fundal de rezervă */
+    		color: #ffffff;
+    		font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: center;
+    		min-height: 100vh;
+    		margin: 0;
+    		padding: 20px;
+    		position: relative; 		/* Foarte important pentru a ancora stratul de fundal */
+    		overflow-x: hidden; 		/* Previne scroll-ul orizontal din cauza blur-ului */
+}
 
-        /* Containerul principal (ca o coloană de tabel) */
+										/* Acesta este stratul cu imaginea blurată */
+		body::before {
+    		content: "";
+    		position: fixed;
+    		top: 0; 
+    		left: 0;
+    		width: 100%; 
+    		height: 100%;
+    		background: url('Foto/background.jpg') no-repeat center center;
+    		background-size: cover;
+    filter: blur(0px) brightness(0.6);  /* Ajustează brightness dacă vrei mai întunecat (0.2) sau mai deschis (0.4) */
+    		z-index: -1; 				/* Trimite poza în spatele butoanelor și textului */
+    		transform: scale(1.1); 		/* Elimină marginile albe care apar de obicei la blur */
+}
+
+        								/* Containerul principal (ca o coloană de tabel) */
         .container {
             max-width: 450px;
             width: 100%;
             text-align: center;
         }
 
-        /* Logo sau Avatar */
+       									 /* Logo sau Avatar */
         .avatar {
             width: 120px;
             height: 120px;
-            border-radius: 50%; /* Îl face rotund */
+            border-radius: 50%; 		/* Îl face rotund */
             border: 2px solid #333;
             margin-bottom: 20px;
             object-fit: cover;
@@ -53,20 +69,20 @@
 			margin-bottom: 20px;
 		    text-transform: uppercase;}
        
-	   p { color: #888; font-weight: 300; 
+	   p { color: #999; font-weight: 300; 
         letter-spacing: 5px; 
         margin-bottom: 40px; 
         font-size: 8px;	
 		line-height: 1		}
 
-        /* Butonul principal de Pre-save (Stil HearNow) */
+       									 /* Butonul principal de Pre-save (Stil HearNow) */
         .main-button {
             display: block;
-            background-color: #1DB954; /* Verde Spotify */
-            color: white;
+            background-color: #1DB954; 	 /* Verde Spotify */
+            color: white;	
             text-decoration: none;
-			line-height: 1.5; /* Oferă spațiu între cele două rânduri */
-			padding: 15px 20px; /* Un pic mai mult spațiu interior pentru echilibru */           
+			line-height: 1.5; 			 /* Oferă spațiu între cele două rânduri */
+			padding: 15px 20px; 		 /* Un pic mai mult spațiu interior pentru echilibru */           
 			border: 1px solid #ffffff;
             border-radius: 9px;
             font-weight: none;
@@ -76,16 +92,16 @@
         .main-button:hover { transform: scale(1.02); }
 		
 		.main-button span {
-			font-size: 9px; /* Data va fi un pic mai fină */
-			opacity: 0.9;   /* O facem foarte puțin mai discretă */
+			font-size: 9px; 			 /* Data va fi un pic mai fină */
+			opacity: 0.9;   			 /* O facem foarte puțin mai discretă */
 			font-weight: 300;
 			}
 
-        /* Rândul de pictograme sociale (ca un rând de tabel) */
+        								 /* Rândul de pictograme sociale (ca un rând de tabel) */
         .social-icons {
             display: flex;
             justify-content: center;
-            gap: 25px; /* Spațiul dintre pictograme */
+            gap: 25px; 					 /* Spațiul dintre pictograme */
             border-top: 1px solid #333;
             padding-top: 25px;
         }
@@ -93,18 +109,18 @@
         .social-icons a img {
             width: 19px;
             height: 19px;
-            filter: grayscale(100%); /* Le face alb-negru ca să arate profi */
+            filter: grayscale(100%); 	 /* Le face alb-negru ca să arate profi */
             transition: filter 0.3s;
         }
         .social-icons a img:hover {
-            filter: grayscale(0%); /* Revin la culoare când treci cu mouse-ul */
+            filter: grayscale(0%); 		 /* Revin la culoare când treci cu mouse-ul */
         }
 		
-		/* Stil pentru Copyright (Footer) */
+										 /* Stil pentru Copyright (Footer) */
     .footer {
-        margin-top: 60px; /* Îl împingem mai jos de pictograme */
+        margin-top: 60px; 				 /* Îl împingem mai jos de pictograme */
         font-size: 8px;
-        color: #333; /* Foarte discret, să nu distragă atenția */
+        color: #888; 					 /* Foarte discret, să nu distragă atenția */
         letter-spacing: 2px;
         text-transform: uppercase;
     }
