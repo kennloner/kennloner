@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenn Loner | Official Artist Page</title>
+    <style>
+        /* Fundal închis pentru vibe-ul de Melodic House */
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Containerul principal (ca o coloană de tabel) */
+        .container {
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Logo sau Avatar */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Îl face rotund */
+            border: 2px solid #333;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h1 { font-size: 24px; letter-spacing: 2px; margin-bottom: 5px; }
+        p { color: #888; margin-bottom: 30px; font-size: 14px; }
+
+        /* Butonul principal de Pre-save (Stil HearNow) */
+        .main-button {
+            display: block;
+            background-color: #1DB954; /* Verde Spotify */
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            transition: transform 0.2s;
+        }
+        .main-button:hover { transform: scale(1.02); }
+
+        /* Rândul de pictograme sociale (ca un rând de tabel) */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 25px; /* Spațiul dintre pictograme */
+            border-top: 1px solid #333;
+            padding-top: 25px;
+        }
+
+        .social-icons a img {
+            width: 32px;
+            height: 32px;
+            filter: grayscale(100%); /* Le face alb-negru ca să arate profi */
+            transition: filter 0.3s;
+        }
+        .social-icons a img:hover {
+            filter: grayscale(0%); /* Revin la culoare când treci cu mouse-ul */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="F:\Kenn\Web\Foto\logo.png" alt="Kenn Loner" class="avatar">
+        
+        <h1>KENN LONER</h1>
+        <p>HOUSE MUSIC PRODUCER</p>
+
+        <a href="https://show.co/rJlaaT3" class="main-button">
+            PRE-SAVE "THE TRAMP" (APRIL 17)
+        </a>
+
+        <div class="social-icons">
+            <a href="#" target="_blank"><img src="F:\Kenn\Web\Icons\spotify-icon94.png" alt="Spotify"></a>
+            <a href="https://soundcloud.com/kennloner" target="_blank"><img src="F:\Kenn\Web\Icons\soundcloud-icon48.png" alt="SoundCloud"></a>
+            <a href="https://www.instagram.com/kennloner/" target="_blank"><img src="F:\Kenn\Web\Icons\instagram-icon48.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/KennLoner/" target="_blank"><img src="F:\Kenn\Web\Icons\facebook-icon48.png" alt="Facebook"></a>
+        </div>
+    </div>
+
+</body>
+</html>
