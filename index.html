@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenn Loner | Official Artist Page</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
     <style>
         /* Fundal închis pentru vibe-ul de Melodic House */
         body {
             background-color: #0d0d0d;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -36,8 +37,13 @@
             object-fit: cover;
         }
 
-        h1 { font-size: 24px; letter-spacing: 2px; margin-bottom: 5px; }
-        p { color: #888; margin-bottom: 30px; font-size: 14px; }
+        h1 { font-size: 46px; font-weight: 900; letter-spacing: 10px; margin-bottom: 4px; }
+       
+	   p { color: #888; font-weight: 300; 
+        letter-spacing: 5px; 
+        margin-bottom: 40px; 
+        font-size: 8px;	
+		line-height: 1		}
 
         /* Butonul principal de Pre-save (Stil HearNow) */
         .main-button {
@@ -45,11 +51,12 @@
             background-color: #1DB954; /* Verde Spotify */
             color: white;
             text-decoration: none;
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: bold;
+            padding: 6px;
+			border: 1px solid #ffffff;
+            border-radius: 9px;
+            font-weight: none;
             margin-bottom: 40px;
-            transition: transform 0.2s;
+            transition: transform 0.3s;
         }
         .main-button:hover { transform: scale(1.02); }
 
@@ -63,14 +70,23 @@
         }
 
         .social-icons a img {
-            width: 32px;
-            height: 32px;
+            width: 19px;
+            height: 19px;
             filter: grayscale(100%); /* Le face alb-negru ca să arate profi */
             transition: filter 0.3s;
         }
         .social-icons a img:hover {
             filter: grayscale(0%); /* Revin la culoare când treci cu mouse-ul */
         }
+		
+		/* Stil pentru Copyright (Footer) */
+    .footer {
+        margin-top: 60px; /* Îl împingem mai jos de pictograme */
+        font-size: 8px;
+        color: #333; /* Foarte discret, să nu distragă atenția */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
     </style>
 </head>
 <body>
@@ -82,16 +98,24 @@
         <p>HOUSE MUSIC PRODUCER</p>
 
         <a href="https://show.co/rJlaaT3" class="main-button">
-            PRE-SAVE "THE TRAMP" (APRIL 17)
+            Pre-Save "THE TRAMP" On Spotify (APRIL 17)
         </a>
 
         <div class="social-icons">
-            <a href="#" target="_blank"><img src="Icons\spotify-icon94.png" alt="Spotify"></a>
-            <a href="https://soundcloud.com/kennloner" target="_blank"><img src="Icons\soundcloud-icon48.png" alt="SoundCloud"></a>
-            <a href="https://www.instagram.com/kennloner/" target="_blank"><img src="Icons\instagram-icon48.png" alt="Instagram"></a>
-            <a href="https://www.facebook.com/KennLoner/" target="_blank"><img src="F:Icons\facebook-icon48.png" alt="Facebook"></a>
+            
+			<a href="https://www.tiktok.com/@kennloner" target="_blank"><img src="Icons\tiktok-icon48.png" alt="TikTok"></a>			
+			<a href="https://www.youtube.com/@KennLonerRecors" target="_blank"><img src="Icons\youtube2-icon48.png" alt="YouTube"></a>
+			
+			<a href="https://kennloner.bandcamp.com/" target="_blank"><img src="bandcamp-icon48.png" alt="BandCamp"></a>
+            <a href="https://soundcloud.com/kennloner" target="_blank"><img src="soundcloud-icon48.png" alt="SoundCloud"></a>
+            <a href="https://www.instagram.com/kennloner/" target="_blank"><img src="instagram-icon48.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/KennLoner/" target="_blank"><img src="facebook-icon48.png" alt="Facebook"></a>
+			<a href="https://x.com/KennLoner" target="_blank"><img src="twitterold-icon48.png" alt="X"></a>
         </div>
+		
     </div>
-
+<div class="footer">
+    &copy; 2026 KENN LONER RECORDS
+</div>
 </body>
 </html>
