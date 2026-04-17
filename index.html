@@ -111,32 +111,20 @@
 			transform: translateY(-2px);
 	}
 
-														/* Butonul Pre-save */
-    .presavetramp-button {
-            display: block;
-            background-color: #1DB954;  				/* Verde Spotify */
-            color: white;
-            text-decoration: none;
-			line-height: 1.5; 							/* Oferă spațiu între cele două rânduri */
-			padding: 15px 15px; 						/* Un pic mai mult spațiu interior pentru echilibru */           
-			border: 1px solid #ffffff;
-            border-radius: 0px;
-            font-weight: none;
-            margin-bottom: 20px;
-            transition: transform 0.3s;
-    }
-	
-    .presavetramp-button:hover 	{
-			transform: scale(1.02);
-			transform: translateY(-2px);
-			box-shadow: 0 0 21px rgba(29, 185, 84, 0.5);
+														/* Noua clasă pentru anunțuri lansări viitoare */
+	.stay-tuned {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			font-size: 1.2rem;
+			color: #ffd700; 								/* O culoare aurie discretă sau poți pune #ffffff pentru alb */
+			text-align: center;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-top: 30px;
+			padding: 15px;
+			border-top: 1px solid #333;
+			padding-top: 45px;
+			transition: all 0.3s ease;
 	}
-		
-	.presavetramp-button span {
-			font-size: 9px; 			/* Data va fi un pic mai fină */
-			opacity: 0.9;   			/* O facem foarte puțin mai discretă */
-			font-weight: 300;
-			}
 
 										/* Rândul de pictograme sociale (ca un rând de tabel) */
     .social-icons {
@@ -195,7 +183,7 @@
 										THE TRAMP IS ONLINE HERE
 			</a>
 
-		<p>Stay Tuned For Future Releases.</p>
+		<p class="stay-tuned">Stay Tuned For Future Releases</p>
 	
         <div class="social-icons">
             
