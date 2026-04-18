@@ -113,17 +113,24 @@
 
 														/* Noua clasă pentru anunțuri lansări viitoare */
 	.stay-tuned {
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			font-size: 1.2rem;
-			color: #ffd700; 								/* O culoare aurie discretă sau poți pune #ffffff pentru alb */
-			text-align: center;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			margin-top: 30px;
 			padding: 15px;
-			border-top: 1px solid #333;
 			padding-top: 45px;
-			transition: all 0.3s ease;
+			margin-top: 30px;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+															/* Aplicăm animația creată mai jos */
+			animation: sparkle 1.5s infinite alternate;
+	}
+
+	@keyframes sparkle {
+			0% {
+			color: #FFFFFF; 								/* Alb curat */
+			text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF;
+				}
+		100% {
+			color: #FFD700; 								/* Galben Auriu (Gold) */
+			text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500; /* Strălucire de aur */
+			}
 	}
 
 										/* Rândul de pictograme sociale (ca un rând de tabel) */
