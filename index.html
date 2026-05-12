@@ -110,32 +110,35 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 	}
 															/* News */
 	
-													
-													
-
-															/* Noua clasă pentru anunțuri lansări viitoare */
+													/* Butonul Pre-save */
+    .presave-button {
+            display: block;
+            background-color: #1DB954;  				/* Verde Spotify */
+            color: white;
+            text-decoration: none;
+			line-height: 1.5; 							/* Oferă spațiu între cele două rânduri */
+			padding: 15px 15px; 						/* Un pic mai mult spațiu interior pentru echilibru */           
+			border: 1px solid #ffffff;
+            border-radius: 0px;
+            font-weight: none;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+    }
 	
-	.stay-tuned {
-			padding: 15px;
-			padding-top: 15px;
-			margin-top: 30px;
-			font-size: 20px;
-			letter-spacing: 4px;
-			text-transform: uppercase;
-															/* Aplicăm animația creată mai jos */
-			animation: sparkle 1.5s infinite alternate;
+    .presave-button:hover 	{
+			transform: scale(1.02);
+			transform: translateY(-2px);
+			box-shadow: 0 0 21px rgba(29, 185, 84, 0.5);
 	}
-
-	@keyframes sparkle {
-			0% {
-			color: #FFFFFF; 								/* Alb curat */
-			text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF;
-				}
-		100% {
-			color: #FFD700; 								/* Galben Auriu (Gold) */
-			text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500; /* Strălucire de aur */
+		
+	.presave-button span {
+			font-size: 9px; 			/* Data va fi un pic mai fină */
+			opacity: 0.9;   			/* O facem foarte puțin mai discretă */
+			font-weight: 300;
 			}
-	}
+													
+
+															
 
 																/* Butonul Releases */
 	.releases {
@@ -221,12 +224,14 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			<h1>KENN <br> LONER</h1>
 			<hr class="modest-line">
 
-			<iframe src="https://show.co/social-unlock/0MR2JL4VkEftwekE6HKYRu/widget" width="300" height="300" frameborder="0"></iframe>
+			<a href="https://show.co/fXYL4Bw" class="presave-button">
+            Pre-Save "BOOMY NEON" On Spotify <br> <span>(OUT may 29, 2026)</span>
+			</a>
 
 			<hr class="modest-line">
 			
 			<a href="releases.html" class="releases">
-										RELEASES
+										LATEST RELEASES
 			</a>
 			
 			<div class="social-icons">
