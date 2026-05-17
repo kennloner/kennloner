@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenn Loner - The Tramp</title>
+			
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1333642738823803');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
+/></noscript>
+								<!-- End Meta Pixel Code -->
+	
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0e14;
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* STRATUL DE FUNDAL BLURAT FIXAT CORECT */
+        .blurred-bg {
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background-image: url('foto/r001thetrampcoverart.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.3) contrast(1.1);
+            transform: scale(1.1);
+            z-index: -1; 
+            pointer-events: none;
+        }
+
+        /* Strat suplimentar pentru accentuarea culorilor din spatele cardului */
+        .blurred-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, rgba(0, 0, 0, 0.5) 90%);
+        }
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: rgba(15, 22, 36, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        /* Coperta centrală */
+        .artwork-wrapper {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .artwork-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        h1 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #00f2fe;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            font-size: 0.92rem;
+            color: #94a3b8;
+            line-height: 1.6;
+			margin-top: 15px;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .links-vector {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .platform-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 14px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .platform-btn:hover {
+            background: rgba(255, 255, 255, 0.09);
+            border-color: rgba(0, 242, 254, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .platform-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .action-text {
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #94a3b8;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .platform-btn:hover .action-text {
+            color: #00f2fe;
+            background: rgba(0, 242, 254, 0.15);
+        }
+        
+        /* CONTAINER PENTRU ALINIEREA BUTOANELOR DE JOS */
+        .navigation-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        /* Butoanele Home și Releases actualizate */
+        .home-btn {
+            flex: 1; /* Împarte spațiul în mod egal (50% - 50%) */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.01);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        .home-btn:hover {
+            color: #00f2fe;
+            border-color: rgba(0, 242, 254, 0.3);
+            background: rgba(0, 242, 254, 0.05);
+        }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 0.75rem;
+            color: #475569;
+            letter-spacing: 1px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="blurred-bg"></div>
+
+    <div class="container">
+        
+        <div class="artwork-wrapper">
+            <img src="foto/r001thetrampcoverart.png" alt="The Tramp Cover Art">
+        </div>
+
+        <h1>The Tramp</h1>
+        <h2>Kenn Loner</h2>
+        
+        <p class="description">
+            <strong>Produced, Mixed, and Mastered by:</strong> Kenn Loner
+            <br><strong>Release date:</strong> April 17, 2026
+			<br><br>"The Tramp" is an introspective journey through sound, crafting a dreamy atmosphere that invites you to dive in the vibes.
+            This track marks the official debut of the Kenn Loner project, exploring the fine lines between Melodic House and Deep House. 
+            <br>It is more than just a song—it is my sonic road journal.
+            It was born during those late nights spent walking miles through the city streets, tidying up my thoughts,
+            accepting my failures, and searching for hope. This is the music of my footsteps and the silence after the storm.
+            <br><br>Play "The Tramp" on your favorite platform.<br>
+        </p>
+
+        <div class="links-vector">
+            
+            <a href="spotify:album:1zzNlX15V8Umd8x6HrWj3W" target="_blank" class="platform-btn">
+                <div class="platform-name">🎵 Spotify</div>               
+            </a>
+
+            <a href="https://music.lnk.to/7FGr1V" target="_blank" class="platform-btn">
+                <div class="platform-name">🍎 Apple Music</div>               
+            </a>
+
+            <a href="https://amazon.com/music/player/albums/B0GV5D671L?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_xsifvR7HBT6P9j347bfHP6pzQ" target="_blank" class="platform-btn">
+                <div class="platform-name">📦 Amazon Music</div>                
+            </a>
+
+            <a href="https://link.deezer.com/s/33idgg3gqvWHPicL79pP7" target="_blank" class="platform-btn">
+                <div class="platform-name">🎧 Deezer</div>                
+            </a>
+
+            <a href="https://youtu.be/RLqkjJcSjJY?si=me7MKGWUtrzyuMNz" target="_blank" class="platform-btn">
+                <div class="platform-name">📺 YouTube Music</div>                
+            </a>
+           
+        </div>
+        
+        <div class="navigation-row">
+            <a href="index.html" class="home-btn">Home</a>
+            <a href="releases.html" class="home-btn">Releases</a>
+        </div>
+
+        <div class="footer">
+            © 2026 KENN LONER. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
