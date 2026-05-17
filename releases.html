@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<title>Kenn Loner | Official WebSite</title>
-	<meta name="description" content="Official website of Kenn Loner, House music producer and artist. Pre-save the latest release and follow on social media.">
-	<meta name="keywords" content="Kenn Loner, Kenn Loner Music, Kenn Loner Records, Music Producer, House Music, Melodic House">
-	<meta property="og:title" content="Kenn Loner | Official Artist Site">
-	<meta property="og:description" content="Kenn Loner, House Music Producer. Pre-save Release, Like, Follow, Subscribe.">
-	<meta property="og:image" content="Foto/logo.png">
-	<meta property="og:url" content="https://kennloner.com">
     
-	<link rel="icon" type="image/png" href="Foto/logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+    <title>Kenn Loner | Official WebSite</title>
+    <meta name="description" content="Official website of Kenn Loner, House music producer and artist. Pre-save the latest release and follow on social media.">
+    <meta name="keywords" content="Kenn Loner, Kenn Loner Music, Kenn Loner Records, Music Producer, House Music, Melodic House">
+    <meta property="og:title" content="Kenn Loner | Official Artist Site">
+    <meta property="og:description" content="Kenn Loner, House Music Producer. Pre-save Release, Like, Follow, Subscribe.">
+    <meta property="og:image" content="Foto/logo.png">
+    <meta property="og:url" content="https://kennloner.com">
     
-<!-- Meta Pixel Code -->
+    <link rel="icon" type="image/png" href="Foto/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,222 +31,224 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 /></noscript>
-								<!-- End Meta Pixel Code -->		
-		
-	<style>
+								<!-- End Meta Pixel Code -->
+    <style>
     
-	body {
-			background-color: #0d0d0d; 						/* Fundal de rezervă */
-			color: #ffffff;
-			font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			min-height: 100vh;
-			margin: 0;
-			padding: 20px;
-			position: relative; 							/* Foarte important pentru a ancora stratul de fundal */
-			overflow-x: hidden; 							/* Previne scroll-ul orizontal din cauza blur-ului */
-	}
-
-															/* Acesta este stratul cu imaginea blurată */
-	body::before {
-			content: "";
-			position: fixed;
-			top: 0; 
-			left: 0;
-			width: 100%; 
-			height: 100%;
-			background: url('Foto/background.jpg') no-repeat center center;
-			background-size: cover;
-			filter: blur(0px) brightness(0.6);  			/* Ajustează brightness dacă vrei mai întunecat (0.2) sau mai deschis (0.4) */
-			z-index: -1; 									/* Trimite poza în spatele butoanelor și textului */
-			transform: scale(1.1); 							/* Elimină marginile albe care apar de obicei la blur */
-	}
-
-															/* Containerul principal (ca o coloană de tabel) */
-    .container {
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
+    body {
+        background-color: #000000; /* Negru pur, curat */
+        color: #ffffff;
+        font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 40px 20px;
+        overflow-x: hidden;
     }
-		
-															/* Nume si Bio */
+
+    /* Containerul principal */
+    .container {
+        max-width: 450px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Nume artist */
     h1 {
-			font-size: 46px;
-			font-weight: 900;
-			letter-spacing: 12px;
-			line-height: 0.9;
-			margin-bottom: 10px;
-		    text-transform: uppercase;
-	}
-       
-	p { 
-			color: #FFFFFF;
-			font-weight: 300; 
-			letter-spacing: 5px; 
-			margin-bottom: 30px; 
-			font-size: 8px;	
-			line-height: 1
-	}
-				
-									/* Linia modestă */
-	.modest-line {
-			border: 0;
-			height: 1px;
-			background: #333; /* O culoare gri închis, discretă */
-			width: 50px;      /* O linie scurtă e mult mai modernă decât una lungă */
-			margin: 20px auto;
-	}
-				
-															/* Noua clasă pentru releases */
-	
-	.stay-tuned {
-			padding: 15px;
-			padding-top: 15px;
-			margin-top: 30px;
-			font-size: 20px;
-			letter-spacing: 4px;
-			text-transform: uppercase;
-															/* Aplicăm animația creată mai jos */
-			animation: sparkle 1.5s infinite alternate;
-	}
+        font-size: 46px;
+        font-weight: 900;
+        letter-spacing: 12px;
+        line-height: 0.9;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+        
+    p { 
+        color: #ffffff; 
+        font-weight: 300; 
+        letter-spacing: 5px; 
+        margin-bottom: 25px; 
+        font-size: 9px; 
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+                
+    /* Linia discretă de demarcare */
+    .modest-line {
+        border: 0;
+        height: 1px;
+        background: #222222; 
+        width: 60px;      
+        margin: 25px auto;
+    }
+                
+    /* Vectorul de butoane simple */
+    .btn-vector {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+    }
 
-	@keyframes sparkle {
-			0% {
-			color: #FFFFFF; 								/* Alb curat */
-			text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF;
-				}
-		100% {
-			color: #FFD700; 								/* Galben Auriu (Gold) */
-			text-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500; /* Strălucire de aur */
-			}
-	}
-	
-															/* Butonul Home */
-	.home {
-			display: inline-block;
-			background-color: transparent; 					/* Fundal transparent pentru un look "Ghost Button" */
-			color: #ffffff;
-			text-decoration: none !important;
-			padding: 12px 25px;
-			border: 1px solid #1DB954; 						/* Contur verde Spotify/HearNow */
-			border-radius: 0px;
-			font-size: 10px;
-			font-weight: 300;
-			letter-spacing: 3px;
-			text-transform: uppercase;
-			transition: all 0.4s ease;
-			margin-top: 0px;
-			margin-bottom: 20px;
-	}
+    /* Stil comun pentru butoanele simple (Releases și Home) */
+    .custom-btn {
+        display: block;
+        background-color: transparent; 
+        color: #ffffff;
+        text-decoration: none !important;
+        padding: 15px 25px;
+        border: 1px solid #333333; /* Contur simplu, discret */
+        border-radius: 4px; /* O ușoară rotunjire modernă */
+        font-size: 11px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
 
-	.home:hover {
-			background-color: rgba(29, 185, 84, 0.1); 		/* O tentă foarte ușoară de verde la interior */
-			border-color: #ffffff; 							/* Conturul devine alb la hover */
-			color: #ffffff;
-			text-decoration: none !important;
-															/* Efect de Glow */
-			box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
-			text-shadow: 0 0 5px rgba(25, 255, 25, 0.5);
-			transform: translateY(-2px);
-	}
-	
+    .custom-btn:hover {
+        background-color: rgba(255, 255, 255, 0.05); /* Tăietură fină gri-deschis la hover */
+        border-color: #ffffff; /* Marginea devine albă */
+        color: #ffffff;
+        transform: translateY(-2px);
+    }
 
-															/* Rândul de pictograme sociale (ca un rând de tabel) */
+    /* Accent special de verde doar pentru butonul Home (păstrând cerința ta) */
+    .custom-btn.home-style {
+        border-color: #1DB954;
+        margin-top: 15px;
+    }
+
+    .custom-btn.home-style:hover {
+        background-color: rgba(29, 185, 84, 0.1);
+        border-color: #ffffff;
+        box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
+    }
+    
+    /* Secțiunea Stay Tuned */
+    .stay-tuned {
+        padding: 15px;
+        margin-top: 35px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-weight: 300;
+        line-height: 1.5;
+        animation: sparkle 1.5s infinite alternate;
+    }
+
+    @keyframes sparkle {
+        0% {
+            color: #ffffff; 
+            text-shadow: 0 0 5px #ffffff;
+        }
+        100% {
+            color: #ffd700; 
+            text-shadow: 0 0 10px #ffd700; 
+        }
+    }
+    
+    /* Pictogramele sociale */
     .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 25px; 										/* Spațiul dintre pictograme */
-            border-top: 1px solid #333;
-            padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px; 
+        border-top: 1px solid #1a1a1a;
+        padding-top: 30px;
+        margin-top: 20px;
     }
 
     .social-icons a img {
-            width: 19px;
-            height: 19px;
-            filter: grayscale(100%);						/* Le face alb-negru ca să arate profi */
-            transition: filter 0.6s;
+        width: 19px;
+        height: 19px;
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.4s ease;
     }
+    
     .social-icons a img:hover {
-            filter: grayscale(0%); 							/* Revin la culoare când treci cu mouse-ul */
+        filter: grayscale(0%); 
+        opacity: 1;
     }
-		
-															/* Stil pentru Copyright (Footer) */
+        
+    /* Subsol (Footer) */
     .footer {
-			margin-top: 12px; 								/* Îl împingem mai jos de pictograme */
-			font-size: 8px;
-			color: #FFFFFF; 									/* Foarte discret, să nu distragă atenția */
-			letter-spacing: 2px;
-			text-transform: uppercase;
+        margin-top: 35px; 
+        font-size: 8px;
+        color: #666666; 
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
-	
-	.legal-links {
-			margin-top: 10px;
-			font-size: 7px; 								/* Chiar mai mic decât copyright-ul */
-			opacity: 0.6;
-	}
-	
-	.legal-links a {
-			color: #FFFFFF;
-			text-decoration: none;
-			margin: 0 5px;
-	}
-	.legal-links a:hover {
-			color: #ffffff;
-	}				
+    
+    .legal-links {
+        margin-top: 10px;
+        font-size: 7px; 
+        opacity: 0.5;
+    }
+    
+    .legal-links a {
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 5px;
+        transition: opacity 0.2s;
+    }
+
+    .legal-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }               
     </style>
-	
+    
 </head>
 
 <body>
 
     <div class="container">
-			
-			        	
-			<h1>KENN <br> LONER</h1>
-			
-			<hr class="modest-line">
-			
-			<p>RELEASES</p>
+            
+        <h1>KENN <br> LONER</h1>
+        
+        <hr class="modest-line">
+        
+        <p>RELEASES</p>
 
-			<p>April 17, 2026</p>
+        <div class="btn-vector">
+            <a href="r001thetramp.html" class="custom-btn">
+                THE TRAMP <span style="font-size: 8px; opacity: 0.5; letter-spacing: 1px; display: block; margin-top: 4px;">April 17, 2026</span>
+            </a>
+            
+            </div>
 
-			<iframe data-testid="embed-iframe" 
-				style="border-radius:1px"
-				src="https://open.spotify.com/embed/track/0SX7RgNAiHJBAZ6EL8GkPx?utm_source=generator&theme=0"
-				width="83%"
-				height="352"
-				frameBorder="0"
-				allowfullscreen=""
-				allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-				loading="lazy">
-			</iframe>
-
-			<p class="stay-tuned">For Future <br>Releases <br>Stay Tuned</p>
-			
-			<a href="index.html" class="home">
-										HOME
-			</a>
-			
-			<div class="social-icons">				
-				<a href="https://open.spotify.com/artist/5NRPOsghCmNLOkZBGZAgVL" target="_blank"><img src="Icons/spotify-icon48.png" alt="Spotify"></a>
-				<a href="https://music.apple.com/us/artist/kenn-loner/1888571390" target="_blank"><img src="Icons/applemusic-icon48.png" alt="AppleMusic"></a>
-				<a href="https://music.amazon.com/artists/B0GV55F593/kenn-loner" target="_blank"><img src="Icons/amazon-icon48.png" alt="AmazonMusic"></a>
-				<a href="https://www.tiktok.com/@kennloner" target="_blank"><img src="Icons/tiktok-icon48.png" alt="TikTok"></a>
-				<a href="https://www.youtube.com/@KennLonerRecors" target="_blank"><img src="Icons/youtube2-icon48.png" alt="YouTube"></a>
-				<a href="https://www.instagram.com/kennloner/" target="_blank"><img src="Icons/instagram-icon48.png" alt="Instagram"></a>
-				<a href="https://www.facebook.com/KennLoner/" target="_blank"><img src="Icons/facebook-icon48.png" alt="Facebook"></a>
-				<a href="https://x.com/KennLoner" target="_blank"><img src="Icons/twitterold-icon48.png" alt="X"></a>
-			</div>
-			
+        <p class="stay-tuned">For Future <br>Releases <br>Stay Tuned</p>
+        
+        <a href="index.html" class="custom-btn home-style">
+            HOME
+        </a>
+        
+        <div class="social-icons">
+            <a href="#" target="_blank"><img src="Icons/itunes2-icon48.png" alt="ITunes"></a>
+            <a href="#" target="_blank"><img src="Icons/youtubemusic-icon48.png" alt="YouTubeMusic"></a>
+            <a href="https://open.spotify.com/artist/5NRPOsghCmNLOkZBGZAgVL" target="_blank"><img src="Icons/spotify-icon48.png" alt="Spotify"></a>
+            <a href="https://music.apple.com/us/artist/kenn-loner/1888571390" target="_blank"><img src="Icons/applemusic-icon48.png" alt="AppleMusic"></a>
+            <a href="https://music.amazon.com/artists/B0GV55F593/kenn-loner" target="_blank"><img src="Icons/amazon-icon48.png" alt="AmazonMusic"></a>
+            <a href="https://kennloner.bandcamp.com/" target="_blank"><img src="Icons/bandcamp-icon48.png" alt="BandCamp"></a>
+            <a href="https://soundcloud.com/kennloner" target="_blank"><img src="Icons/soundcloud-icon48.png" alt="SoundCloud"></a>
+            <a href="https://www.tiktok.com/@kennloner" target="_blank"><img src="Icons/tiktok-icon48.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com/@KennLonerRecors" target="_blank"><img src="Icons/youtube2-icon48.png" alt="YouTube"></a>
+            <a href="https://www.instagram.com/kennloner/" target="_blank"><img src="Icons/instagram-icon48.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/KennLoner/" target="_blank"><img src="Icons/facebook-icon48.png" alt="Facebook"></a>
+            <a href="https://x.com/KennLoner" target="_blank"><img src="Icons/twitterold-icon48.png" alt="X"></a>
+        </div>
+            
     </div>
-	
-	<div class="footer">
-    &copy; 2026 KENN LONER RECORDS
-	</div>
-	
+    
+    <div class="footer">
+        © 2026 KENN LONER RECORDS
+    </div>
+    
     <div class="legal-links">
         <a href="privacy.html">Privacy Policy</a> | 
         <a href="terms.html">Terms of Use</a> | 
