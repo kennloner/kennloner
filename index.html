@@ -7,16 +7,15 @@
 	<title>Kenn Loner | Official WebSite</title>
 	<meta name="description" content="Official website of Kenn Loner, House music producer and artist. Pre-save the latest release and follow on social media.">
 	<meta name="keywords" content="Kenn Loner, Kenn Loner Music, Kenn Loner Records, Music Producer, House Music, Melodic House">
+	
 	<meta property="og:title" content="Kenn Loner | Official Artist Site">
 	<meta property="og:description" content="Kenn Loner, House Music Producer. Pre-save Release, Like, Follow, Subscribe.">
-	<meta property="og:image" content="img/logo.png">
+	<meta property="og:image" content="https://kennloner.com/img/logo.png">
 	<meta property="og:url" content="https://kennloner.com">
     
-	<link rel="icon" type="image/png" href="img/logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;900&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="Foto/logo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap" rel="stylesheet">
     
-		
-<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -32,12 +31,9 @@ fbq('track', 'PageView');
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 /></noscript>
-								<!-- End Meta Pixel Code -->
-		
-	<style>
-    
+<style>
 	body {
-			background-color: #0d0d0d; 						/* Fundal de rezervă */
+			background-color: #0b0e14;
 			color: #ffffff;
 			font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
 			display: flex;
@@ -46,12 +42,11 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			justify-content: center;
 			min-height: 100vh;
 			margin: 0;
-			padding: 20px;
-			position: relative; 							/* Foarte important pentru a ancora stratul de fundal */
-			overflow-x: hidden; 							/* Previne scroll-ul orizontal din cauza blur-ului */
+			padding: 40px 20px;
+			position: relative;
+			overflow-x: hidden;
 	}
 
-															/* Acesta este stratul cu imaginea blurată */
 	body::before {
 			content: "";
 			position: fixed;
@@ -59,173 +54,169 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			left: 0;
 			width: 100%; 
 			height: 100%;
-			background: url('Foto/background.jpg') no-repeat center center;
+			background: url('img/background.jpg') no-repeat center center;
 			background-size: cover;
-			filter: blur(0px) brightness(0.6);  			/* Ajustează brightness dacă vrei mai întunecat (0.2) sau mai deschis (0.4) */
-			z-index: -1; 									/* Trimite poza în spatele butoanelor și textului */
-			transform: scale(1.1); 							/* Elimină marginile albe care apar de obicei la blur */
+			filter: brightness(0.4) contrast(1.1); 
+			z-index: -1;
+			transform: scale(1.05);
 	}
 
-															/* Containerul principal (ca o coloană de tabel) */
     .container {
-            max-width: 450px;
+            max-width: 440px;
             width: 100%;
             text-align: center;
+            padding: 10px 5px;
     }
-    
-															/* Nume si Bio */
-    h1 {
-			font-size: 46px;
+
+	h1 {
+			font-size: 42px;
 			font-weight: 900;
-			letter-spacing: 12px;
-			line-height: 0.9;
-			margin-bottom: 10px;
+			letter-spacing: 14px;
+			line-height: 0.95;
+			margin-bottom: 12px;
 		    text-transform: uppercase;
-	}
-       
-	p { 
-			color: #FFFFFF; font-weight: 300; 
-			letter-spacing: 5px; 
-			margin-bottom: 30px; 
-			font-size: 8px;	
-			line-height: 1
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 	}
 	
-									/* Linia modestă */
 	.modest-line {
 			border: 0;
 			height: 1px;
-			background: #333; /* O culoare gri închis, discretă */
-			width: 50px;      /* O linie scurtă e mult mai modernă decât una lungă */
-			margin: 20px auto;
+			background: rgba(255, 255, 255, 0.1);
+			width: 60px;      
+			margin: 25px auto;
 	}
-															/* News */
 	
-													/* Butonul Pre-save */
+    /* BUTONUL PRE-SAVE CU GLOW ULTRA-MODERN */
     .presave-button {
             display: block;
-            background-color: #1DB954;  				/* Verde Spotify */
-            color: white;
+            width: 100%; /* Ocupă tot spațiul dintr-un capăt în altul */
+            background: rgba(29, 185, 84, 0.04);
+            color: #ffffff;
             text-decoration: none;
-			line-height: 1.5; 							/* Oferă spațiu între cele două rânduri */
-			padding: 15px 15px; 						/* Un pic mai mult spațiu interior pentru echilibru */           
-			border: 1px solid #ffffff;
-            border-radius: 0px;
-            font-weight: none;
-            margin-bottom: 20px;
-            transition: transform 0.3s;
+			line-height: 1.6;
+			padding: 18px 20px;            
+			border: 1px solid rgba(29, 185, 84, 0.6);
+            border-radius: 8px; /* Margini ușor rotunjite pentru un aer modern */
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(29, 185, 84, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
     }
 	
-    .presave-button:hover 	{
-			transform: scale(1.02);
-			transform: translateY(-2px);
-			box-shadow: 0 0 21px rgba(29, 185, 84, 0.5);
+    .presave-button:hover {
+			transform: translateY(-3px);
+            border-color: rgba(29, 185, 84, 1);
+            background: rgba(29, 185, 84, 0.12);
+			box-shadow: 0 0 25px rgba(29, 185, 84, 0.45), inset 0 0 8px rgba(29, 185, 84, 0.2);
 	}
 		
 	.presave-button span {
-			font-size: 9px; 			/* Data va fi un pic mai fină */
-			opacity: 0.9;   			/* O facem foarte puțin mai discretă */
+			font-size: 9px;
+			opacity: 0.8;
 			font-weight: 300;
-			}
-													
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 3px;
+            color: #00f2fe; /* Accent neon fin pe dată */
+	}
 
-															
-
-																/* Butonul Releases */
+	/* BUTONUL RELEASES ADAPTAT LA ACEEAȘI LĂȚIME COMPLETĂ */
 	.releases {
-			display: inline-block;
-			background-color: transparent; 					/* Fundal transparent pentru un look "Ghost Button" */
+			display: block;
+            width: 100%; /* Forțat dintr-un capăt în altul ca cel de sus */
+			background-color: rgba(255, 255, 255, 0.02);
 			color: #ffffff;
 			text-decoration: none !important;
-			padding: 12px 25px;
-			border: 1px solid #1DB954; 						/* Contur verde Spotify/HearNow */
-			border-radius: 0px;
-			font-size: 10px;
-			font-weight: 300;
+			padding: 16px 20px;
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			border-radius: 8px;
+			font-size: 11px;
+			font-weight: 700;
 			letter-spacing: 3px;
 			text-transform: uppercase;
-			transition: all 0.4s ease;
-			margin-top: 0px;
-			margin-bottom: 20px;
+			transition: all 0.3s ease;
+			margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 	}
 
 	.releases:hover {
-			background-color: rgba(29, 185, 84, 0.1); 		/* O tentă foarte ușoară de verde la interior */
-			border-color: #ffffff; 							/* Conturul devine alb la hover */
+			background-color: rgba(255, 255, 255, 0.06);
+			border-color: #00f2fe; /* Trece în nuanța cyan din paginile interioare */
 			color: #ffffff;
-			text-decoration: none !important;
-															/* Efect de Glow */
-			box-shadow: 0 0 15px rgba(29, 185, 84, 0.5);
-			text-shadow: 0 0 5px rgba(25, 255, 25, 0.5);
+			box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
 			transform: translateY(-2px);
 	}
 
-															/* Rândul de pictograme sociale (ca un rând de tabel) */
     .social-icons {
             display: flex;
             justify-content: center;
-            gap: 25px; 										/* Spațiul dintre pictograme */
-            border-top: 1px solid #333;
+            gap: 22px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             padding-top: 30px;
+            flex-wrap: wrap;
     }
 
     .social-icons a img {
-            width: 19px;
-            height: 19px;
-            filter: grayscale(100%);						/* Le face alb-negru ca să arate profi */
-            transition: filter 0.6s;
+            width: 20px;
+            height: 20px;
+            filter: grayscale(100%) brightness(0.8);
+            transition: all 0.4s ease;
     }
+    
     .social-icons a img:hover {
-            filter: grayscale(0%); 							/* Revin la culoare când treci cu mouse-ul */
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.15);
     }
 		
-															/* Stil pentru Copyright (Footer) */
     .footer {
-			margin-top: 12px; 								/* Îl împingem mai jos de pictograme */
+			margin-top: 30px;
 			font-size: 8px;
-			color: #FFFFFF; 									/* Foarte discret, să nu distragă atenția */
+			color: #55637a;
 			letter-spacing: 2px;
 			text-transform: uppercase;
     }
 	
 	.legal-links {
-			margin-top: 10px;
-			font-size: 7px; 								/* Chiar mai mic decât copyright-ul */
-			opacity: 0.6;
+			margin-top: 12px;
+			font-size: 7px;
+			opacity: 0.5;
 	}
 	
 	.legal-links a {
-			color: #FFFFFF;
+			color: #94a3b8;
 			text-decoration: none;
-			margin: 0 5px;
+			margin: 0 6px;
+            transition: color 0.2s;
 	}
+	
 	.legal-links a:hover {
 			color: #ffffff;
 	}				
     </style>
-	
 </head>
 
 <body>
 
     <div class="container">
 			
-			
-        	
 			<h1>KENN <br> LONER</h1>
 			<hr class="modest-line">
 
-			<a href="https://show.co/fXYL4Bw" class="presave-button">
-            Pre-Save "BOOMY NEON" On Spotify <br> <span>(OUT may 29, 2026)</span>
+			<a href="https://show.co/fXYL4Bw" target="_blank" class="presave-button">
+				Pre-Save "BOOMY NEON" On Spotify <br> <span>OUT MAY 29, 2026</span>
 			</a>
 
 			<hr class="modest-line">
 			
-			<a href="releases/" class="releases">
-										LATEST RELEASES
+			<a href="releases/thetramp/" class="releases">
+				LATEST RELEASES
 			</a>
 			
-			<div class="social-icons">				
+			<div class="social-icons">
 				<a href="https://open.spotify.com/artist/5NRPOsghCmNLOkZBGZAgVL" target="_blank"><img src="Icons/spotify-icon48.png" alt="Spotify"></a>
 				<a href="https://music.apple.com/us/artist/kenn-loner/1888571390" target="_blank"><img src="Icons/applemusic-icon48.png" alt="AppleMusic"></a>
 				<a href="https://music.amazon.com/artists/B0GV55F593/kenn-loner" target="_blank"><img src="Icons/amazon-icon48.png" alt="AmazonMusic"></a>
@@ -239,7 +230,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
     </div>
 	
 	<div class="footer">
-    &copy; 2026 KENN LONER RECORDS
+    © 2026 KENN LONER RECORDS
 	</div>
 	
     <div class="legal-links">
