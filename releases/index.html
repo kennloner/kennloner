@@ -33,182 +33,196 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 /></noscript>
 								<!-- End Meta Pixel Code -->
     <style>
-    
-    body {
-        background-color: #000000; /* Negru pur, curat */
-        color: #ffffff;
-        font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 40px 20px;
-        overflow-x: hidden;
-    }
+	/* RESETARE GLOBALĂ: Împiedică butoanele să iasă din ecran și rezolvă marginile */
+	* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+	}
 
-    /* Containerul principal */
-    .container {
-        max-width: 450px;
-        width: 100%;
-        text-align: center;
-    }
+	body {
+			background-color: #000000;
+			color: #ffffff;
+			font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			margin: 0;
+			padding: 40px 0px;
+			overflow-x: hidden;
+	}
 
-    /* Nume artist */
-    h1 {
-        font-size: 46px;
-        font-weight: 900;
-        letter-spacing: 12px;
-        line-height: 0.9;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
-        
-    p { 
-        color: #ffffff; 
-        font-weight: 300; 
-        letter-spacing: 5px; 
-        margin-bottom: 25px; 
-        font-size: 9px; 
-        line-height: 1.2;
-        text-transform: uppercase;
-    }
-                
-    /* Linia discretă de demarcare */
-    .modest-line {
-        border: 0;
-        height: 1px;
-        background: #222222; 
-        width: 60px;      
-        margin: 25px auto;
-    }
-                
-    /* Vectorul de butoane simple */
-    .btn-vector {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        margin: 20px 0;
-    }
+	/* CONTAINER PERFECT CENTRAT */
+	.container {
+			max-width: 440px;
+			width: 90%;
+			text-align: center;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+	}
 
-    /* Stil comun pentru butoanele simple (Releases și Home) */
-    .custom-btn {
-        display: block;
-        background-color: transparent; 
-        color: #ffffff;
-        text-decoration: none !important;
-        padding: 15px 25px;
-        border: 1px solid #333333; 			/* Contur simplu, discret */
-        border-radius: 4px;					 /* O ușoară rotunjire modernă */
-        font-size: 11px;
-        font-weight: 300;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        transition: all 0.3s ease;
-    }
+	h1 {
+			font-size: 42px;
+			font-weight: 900;
+			letter-spacing: 14px;
+			line-height: 0.95;
+			margin-bottom: 12px;
+			text-transform: uppercase;
+			width: 100%;
+	}
+		
+	p { 
+			color: #ffffff; 
+			font-weight: 300; 
+			letter-spacing: 5px; 
+			margin-bottom: 25px; 
+			font-size: 9px; 
+			line-height: 1.2;
+			text-transform: uppercase;
+	}
+				
+	.modest-line {
+			border: 0;
+			height: 1px;
+			background: #222222; 
+			width: 60px;      
+			margin: 25px auto;
+	}
+				
+	.btn-vector {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			margin: 20px 0;
+			width: 100%;
+	}
 
-    .custom-btn:hover {
-        background-color: rgba(255, 255, 255, 0.05); /* Tăietură fină gri-deschis la hover */
-        border-color: #ffffff; /* Marginea devine albă */
-        color: #ffffff;
-        transform: translateY(-2px);
-    }
+	/* STILUL DE BAZĂ CURAT (Acum aplicat implicit și pentru butonul Home) */
+	.custom-btn {
+			display: block;
+			width: 100%;
+			background-color: transparent; 
+			color: #ffffff;
+			text-decoration: none !important;
+			padding: 16px 25px;
+			border: 1px solid #333333; 
+			border-radius: 8px; /* Rotunjire fină la fel ca pe prima pagină pentru simetrie */
+			font-size: 11px;
+			font-weight: 300;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			transition: all 0.3s ease;
+	}
 
-    /* Accent special de verde doar pentru butonul Home (păstrând cerința ta) */
-    .custom-btn.home-style {
-        border-color: #1DB954;
-        margin-top: 15px;
-    }
+	.custom-btn:hover {
+			background-color: rgba(255, 255, 255, 0.05); 
+			border-color: #ffffff; 
+			color: #ffffff;
+			transform: translateY(-2px);
+	}
 
-    .custom-btn.home-style:hover {
-        background-color: rgba(29, 185, 84, 0.1);
-        border-color: #ffffff;
-        box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
-    }
-    
-    /* Secțiunea Stay Tuned */
-    .stay-tuned {
-        padding: 15px;
-        margin-top: 35px;
-        margin-bottom: 10px;
-        font-size: 16px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        font-weight: 300;
-        line-height: 1.5;
-        animation: sparkle 1.5s infinite alternate;
-    }
+	/* ACCENTUL VERDE SPOTIFY SHINE MUTAT PE PIESA LANSATĂ (THE TRAMP) */
+	.custom-btn.release-active {
+			border-color: #1DB954;
+			font-weight: 700; /* Text mai definit ca să iasă în evidență */
+	}
 
-    @keyframes sparkle {
-        0% {
-            color: #ffffff; 
-            text-shadow: 0 0 5px #ffffff;
-        }
-        100% {
-            color: #ffd700; 
-            text-shadow: 0 0 10px #ffd700; 
-        }
-    }
-    
-    /* Pictogramele sociale */
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px; 
-        border-top: 1px solid #1a1a1a;
-        padding-top: 30px;
-        margin-top: 20px;
-    }
+	.custom-btn.release-active:hover {
+			background-color: rgba(29, 185, 84, 0.1);
+			border-color: #ffffff;
+			box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
+	}
 
-    .social-icons a img {
-        width: 19px;
-        height: 19px;
-        filter: grayscale(100%);
-        opacity: 0.6;
-        transition: all 0.4s ease;
-    }
-    
-    .social-icons a img:hover {
-        filter: grayscale(0%); 
-        opacity: 1;
-    }
-        
-    /* Subsol (Footer) */
-    .footer {
-        margin-top: 35px; 
-        font-size: 8px;
-        color: #666666; 
-        letter-spacing: 2px;
-        text-transform: uppercase;
-    }
-    
-    .legal-links {
-        margin-top: 10px;
-        font-size: 7px; 
-        opacity: 0.5;
-    }
-    
-    .legal-links a {
-        color: #ffffff;
-        text-decoration: none;
-        margin: 0 5px;
-        transition: opacity 0.2s;
-    }
+	/* SPAȚIERE BUTON HOME (RĂMÂNE SIMPLU) */
+	.home-space {
+			margin-top: 15px;
+			width: 100%;
+	}
+	
+	.stay-tuned {
+			padding: 15px;
+			margin-top: 35px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			font-weight: 300;
+			line-height: 1.5;
+			animation: sparkle 1.5s infinite alternate;
+	}
 
-    .legal-links a:hover {
-        opacity: 1;
-        text-decoration: underline;
-    }               
-    </style>
-    
+	@keyframes sparkle {
+			0% {
+				color: #ffffff; 
+				text-shadow: 0 0 5px #ffffff;
+			}
+			100% {
+				color: #ffd700; 
+				text-shadow: 0 0 10px #ffd700; 
+			}
+	}
+	
+	.social-icons {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 20px; 
+			border-top: 1px solid #1a1a1a;
+			padding-top: 30px;
+			margin-top: 20px;
+			width: 100%;
+	}
+
+	.social-icons a img {
+			width: 20px;
+			height: 20px;
+			filter: grayscale(100%);
+			opacity: 0.6;
+			transition: all 0.4s ease;
+	}
+	
+	.social-icons a img:hover {
+			filter: grayscale(0%); 
+			opacity: 1;
+			transform: scale(1.15);
+	}
+		
+	.footer {
+			margin-top: 35px; 
+			font-size: 8px;
+			color: #666666; 
+			letter-spacing: 2px;
+			text-transform: uppercase;
+	}
+	
+	.legal-links {
+			margin-top: 10px;
+			font-size: 7px;
+			opacity: 0.5;
+	}
+	
+	.legal-links a {
+			color: #ffffff;
+			text-decoration: none;
+			margin: 0 5px;
+			transition: opacity 0.2s;
+	}
+
+	.legal-links a:hover {
+			opacity: 1;
+			text-decoration: underline;
+	}               
+</style>
 </head>
 
 <body>
 
     <div class="container">
-            
+			
         <h1>KENN <br> LONER</h1>
         
         <hr class="modest-line">
@@ -216,15 +230,14 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
         <p>RELEASES</p>
 
         <div class="btn-vector">
-            <a href="../releases/thetramp/" class="custom-btn">
-                THE TRAMP <span style="font-size: 8px; opacity: 0.5; letter-spacing: 1px; display: block; margin-top: 4px;">April 17, 2026</span>
+            <a href="../releases/thetramp/index.html" class="custom-btn release-active">
+                THE TRAMP <span style="font-size: 8px; opacity: 0.7; letter-spacing: 1px; display: block; margin-top: 4px; font-weight: 300;">April 17, 2026</span>
             </a>
-            
-            </div>
+        </div>
 
         <p class="stay-tuned">For Future <br>Releases <br>Stay Tuned</p>
         
-        <a href="../" class="custom-btn home-style">
+        <a href="../index.html" class="custom-btn home-space">
             HOME
         </a>
         
