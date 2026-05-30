@@ -26,7 +26,7 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 /></noscript>
 								<!-- End Meta Pixel Code -->
-	
+
     <style>
         * {
             box-sizing: border-box;
@@ -79,7 +79,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-radius: 16px;
-            padding: 10px 25px;
+            padding: 25px;
             text-align: center;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
             position: relative;
@@ -103,94 +103,64 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
             display: block;
         }
 
-        h1 {
-            font-size: 1.7rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: #ffffff;
+        /* Stil special pentru textul de îndemn centrat */
+        .play-now-text {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            text-align: center; /* Centrare exactă solicitată */
+            font-weight: 500;
             letter-spacing: 0.5px;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 400;
-            color: #00f2fe;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .description {
             font-size: 0.92rem;
             color: #94a3b8;
             line-height: 1.6;
-			margin-top: 15px;
-            margin-bottom: 15px;
+            margin-top: 25px;
             text-align: justify;
         }
 
-        .links-vector {
+        /* CONTAINER NOU PICTOGRAME: ALINIATE DE LA UN CAPĂT LA ALTUL */
+        .stream-icons {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .platform-btn {
-            display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Împinge pictogramele dintr-un capăt în altul */
             align-items: center;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 8px;
-            padding: 14px 20px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 20px;
+            margin-bottom: 10px;
+            width: 100%;
         }
 
-        .platform-btn:hover {
-            background: rgba(255, 255, 255, 0.09);
-            border-color: rgba(0, 242, 254, 0.5);
-            transform: translateY(-2px);
-        }
-
-        .platform-name {
+        .stream-icons a {
             display: flex;
+            justify-content: center;
             align-items: center;
-            gap: 12px;
         }
 
-        .action-text {
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #94a3b8;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        .platform-btn:hover .action-text {
-            color: #00f2fe;
-            background: rgba(0, 242, 254, 0.15);
+        .stream-icons a img {
+            width: 24px; /* Puțin mai mari pentru a fi ușor de apăsat pe telefon */
+            height: 24px;
+            filter: grayscale(100%) brightness(0.8);
+            transition: all 0.3s ease;
         }
         
-        /* CONTAINER PENTRU ALINIEREA BUTOANELOR DE JOS */
+        .stream-icons a img:hover {
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.2);
+        }
+        
+        /* CONTAINER BUTOANE NAVIGARE */
         .navigation-row {
             display: flex;
             justify-content: center;
             gap: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             width: 100%;
         }
 
-        /* Butoanele Home și Releases actualizate */
         .home-btn {
-            flex: 1; /* Împarte spațiul în mod egal (50% - 50%) */
+            flex: 1;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -214,7 +184,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
         }
 
         .footer {
-            margin-top: 35px;
+            margin-top: 30px;
             font-size: 0.75rem;
             color: #475569;
             letter-spacing: 1px;
@@ -228,7 +198,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 
     <div class="container">
         
-		<div class="navigation-row">
+        <div class="navigation-row">
             <a href="../../" class="home-btn">Home</a>
             <a href="../../releases/" class="home-btn">Releases</a>
         </div>
@@ -237,44 +207,27 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
             <img src="../../img/coverart/boomyneoncover.jpg" alt="Boomy Neon Cover Art">
         </div>
 
-        <h1>Boomy Neon</h1>
-        <h2>Kenn Loner</h2>
+        <p class="play-now-text">
+            Play on your favorite platform.
+        </p>
+
+        <div class="stream-icons">
+            <a href="spotify:album:4ILZ203wv7sSF7cVlbE7ai" target="_blank"><img src="../../Icons/spotify-icon48.png" alt="Spotify"></a>
+            <a href="https://music.apple.com/us/song/boomy-neon/6768447249" target="_blank"><img src="../../Icons/applemusic-icon48.png" alt="Apple Music"></a>
+            <a href="https://amazon.com/music/player/albums/B0H1F1J8VL" target="_blank"><img src="../../Icons/amazon-icon48.png" alt="Amazon Music"></a>
+            <a href="https://www.youtube.com/watch?v=sR6gnuRWyQo" target="_blank"><img src="../../Icons/youtube2-icon48.png" alt="YouTube"></a>
+            <a href="https://link.deezer.com/s/33oY1L4qSGipPy4zMydih" target="_blank"><img src="../../Icons/deezer-icon48.png" alt="Instagram"></a>
+        </div>
         
         <p class="description">
             <strong>Produced, Mixed, and Mastered by:</strong> Kenn Loner
             <br><strong>Release date:</strong> May 29, 2026
-			<br><br>"Boomy Neon" is a vibrant Progressive House track that blends driving energy
-			with lush, atmospheric textures.
-			This track focuses on a "colorful" and melodic soundscape,
-			designed to capture the pulse of a futuristic city night.
-			
-            <br><br>Play "Boomy Neon" on your favorite platform.<br>
+            <br><br>"Boomy Neon" is a vibrant Progressive House track that blends driving energy
+            with lush, atmospheric textures.
+            This track focuses on a "colorful" and melodic soundscape,
+            designed to capture the pulse of a futuristic city night.
         </p>
 
-        <div class="links-vector">
-            
-            <a href="spotify:album:4ILZ203wv7sSF7cVlbE7ai" target="_blank" class="platform-btn">
-                <div class="platform-name">🎵 Spotify</div>               
-            </a>
-
-            <a href="https://music.apple.com/us/song/boomy-neon/6768447249" target="_blank" class="platform-btn">
-                <div class="platform-name">🍎 Apple Music</div>               
-            </a>
-
-			<a href="https://amazon.com/music/player/albums/B0H1F1J8VL" target="_blank" class="platform-btn">
-                <div class="platform-name">📦 Amazon Music</div>                
-            </a>
-
-            <a href="https://link.deezer.com/s/33oY1L4qSGipPy4zMydih" target="_blank" class="platform-btn">
-                <div class="platform-name">🎧 Deezer</div>                
-            </a>
-
-            <a href="https://www.youtube.com/watch?v=sR6gnuRWyQo" target="_blank" class="platform-btn">
-                <div class="platform-name">📺 YouTube Music</div>                
-            </a>
-           
-        </div>
-        
         <div class="footer">
             © 2026 KENN LONER. All rights reserved.
         </div>
