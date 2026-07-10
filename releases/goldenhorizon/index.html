@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenn Loner | Golden Horizon</title>
+	<meta property="og:image" content="../../img/coverart/goldenhorizoncover.jpg">
+    <meta property="og:url" content="https://kennloner.com/releases/goldenhorizon">
+	
+	<link rel="icon" type="image/png" href="../../img/coverart/goldenhorizoncover.jpg">		
+			
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1333642738823803');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
+/></noscript>
+								<!-- End Meta Pixel Code -->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0e14;
+            color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* STRATUL DE FUNDAL BLURAT FIXAT CORECT */
+        .blurred-bg {
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background-image: url('../../img/coverart/goldenhorizoncover.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px) brightness(0.3) contrast(1.1);
+            transform: scale(1.1);
+            z-index: -1; 
+            pointer-events: none;
+        }
+
+        /* Strat suplimentar pentru accentuarea culorilor din spatele cardului */
+        .blurred-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, rgba(0, 0, 0, 0.5) 90%);
+        }
+
+        .container {
+            max-width: 450px;
+            width: 100%;
+            background: rgba(15, 22, 36, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            position: relative;
+        }
+
+        /* Coperta centrală */
+        .artwork-wrapper {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 25px auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .artwork-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Stil special pentru textul de îndemn centrat */
+        .play-now-text {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            text-align: center; /* Centrare exactă solicitată */
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .description {
+            font-size: 0.92rem;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-top: 25px;
+            text-align: justify;
+        }
+
+        /* CONTAINER NOU PICTOGRAME: ALINIATE DE LA UN CAPĂT LA ALTUL */
+        .stream-icons {
+            display: flex;
+            justify-content: space-between; /* Împinge pictogramele dintr-un capăt în altul */
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 20px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .stream-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stream-icons a img {
+            width: 24px; /* Puțin mai mari pentru a fi ușor de apăsat pe telefon */
+            height: 24px;
+            filter: grayscale(100%) brightness(0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .stream-icons a img:hover {
+            filter: grayscale(0%) brightness(1);
+            transform: scale(1.2);
+        }
+        
+        /* CONTAINER BUTOANE NAVIGARE */
+        .navigation-row {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        .home-btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.01);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        .home-btn:hover {
+            color: #00f2fe;
+            border-color: rgba(0, 242, 254, 0.3);
+            background: rgba(0, 242, 254, 0.05);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: #475569;
+            letter-spacing: 1px;
+        }
+        
+		.presave-button {
+            display: block;
+            width: 100%; 
+            background: rgba(29, 185, 84, 0.04);
+            color: #ffffff;
+            text-decoration: none;
+			line-height: 1.6;
+			padding: 20px 20px;            
+			border: 1px solid rgba(29, 185, 84, 0.6);
+            border-radius: 8px; 
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(29, 185, 84, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+	
+    .presave-button:hover {
+			transform: translateY(-3px);
+            border-color: rgba(29, 185, 84, 1);
+            background: rgba(29, 185, 84, 0.12);
+			box-shadow: 0 0 25px rgba(29, 185, 84, 0.45), inset 0 0 8px rgba(29, 185, 84, 0.2);
+	}
+		
+	.presave-button span {
+			font-size: 9px;
+			opacity: 0.8;
+			font-weight: 300;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-top: 3px;
+            color: #00f2fe; 
+	}
+		
+    </style>
+</head>
+<body>
+
+    <div class="blurred-bg"></div>
+
+    <div class="container">
+        
+        <div class="navigation-row">
+            <a href="../../index.html" class="home-btn">KENN LONER</a>
+            <a href="../../releases/index.html" class="home-btn">Releases</a>
+        </div>
+		
+        <div class="artwork-wrapper">
+            <img src="../../img/coverart/goldenhorizoncover.jpg" alt="Golden Horizon Cover Art">
+        </div>
+
+        <a href="https://show.co/nreaS3w" target="_blank" class="presave-button">
+				PRE-SAVE
+				<br>"GOLDEN HORIZON" 
+				<br>On Spotify <br> <span>OUT July 24, 2026</span>
+			</a>
+
+		<p class="description">
+            <strong>Produced, Mixed, and Mastered by:</strong> Kenn Loner
+            <br><strong>Release date:</strong> June 24, 2026
+            <br><br>"Golden Horizon" is an energetic, melodic House track crafted for those exact moments when
+			the sunset fades into the rhythm of the night. Driven by a powerful bassline and euphoric synth textures,
+			it perfectly balances  energy with the pure freedom of a late-night drive.
+        </p>
+
+        <div class="footer">
+            © 2026 KENN LONER. All rights reserved.
+        </div>
+    </div>
+
+</body>
+</html>
