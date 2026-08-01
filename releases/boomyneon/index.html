@@ -28,169 +28,181 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 								<!-- End Meta Pixel Code -->
 
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    html {
+		background-color: #000000;
+		height: 100%;
+	}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0b0e14;
-            color: #f1f5f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px 20px;
-            position: relative;
-            overflow-x: hidden;
-        }
+	body {
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background-color: #000000;
+		color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center; 
+		align-items: center;
+		min-height: 100vh;
+		padding: 0;
+		position: relative;
+		overflow-x: hidden;
+	}
+
+	/* STRATUL DE FUNDAL BLURAT FIXAT CORECT PENTRU TOATE DISPOZITIVELE */
+	.blurred-bg {
+		position: fixed;
+		top: -5%;
+		left: -5%;
+		width: 110%;
+		height: 110%;
+		background-image: url('../../img/coverart/boomyneoncover.jpg');
+		background-size: cover;
+		background-position: center;
+		filter: blur(20px) brightness(0.3) contrast(1.1); /* Blur crescut pentru efect smooth */
+		transform: scale(1.05);
+		z-index: 0; 
+		pointer-events: none;
+	}
+
+		/* Stratul de iluminare radială */
+	.blurred-bg::after {
+		content: '';
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, rgba(0, 0, 0, 0.6) 90%);
+	}
+
+		
+	.container {
+		position: relative;
+		z-index: 1;
+		max-width: 450px;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.85); 
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		padding: 9px 26px;
+		text-align: center;
+		box-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
+	}
+
+		/* REGULA PENTRU MOBIL */
+	@media (max-width: 600px) {
+		body {
+			justify-content: flex-start; /* Începe de sus pe telefon */
+			padding-top: 9px;
+			padding-bottom: 9px;
+			overscroll-behavior-y: none; /* Oprește elasticitatea doar pe mobil */
+		}
+	}
         
-        /* STRATUL DE FUNDAL BLURAT FIXAT CORECT */
-        .blurred-bg {
-            position: fixed;
-            top: -10%;
-            left: -10%;
-            width: 120%;
-            height: 120%;
-            background-image: url('../../img/coverart/boomyneoncover.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px) brightness(0.3) contrast(1.1);
-            transform: scale(1.1);
-            z-index: -1; 
-            pointer-events: none;
-        }
+		/* CONTAINER BUTOANE NAVIGARE */
+	.navigation-row {
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		padding: 0px 0px 9px 0px;
+		width: 100%;
+	}
 
-        /* Strat suplimentar pentru accentuarea culorilor din spatele cardului */
-        .blurred-bg::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, rgba(0, 0, 0, 0.5) 90%);
-        }
+	.home-btn {
+		flex: 1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #94a3b8;
+		text-decoration: none;
+		font-size: 11px;
+		font-weight: 900;
+		padding: 9px;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 1px;
+		background: rgba(255, 255, 255, 0.01);
+		text-transform: uppercase;
+		letter-spacing: 6px;
+		margin-left: 0px;
+		text-indent: 6px;
+		transition: all 0.2s ease;
+    }
 
-        .container {
-            max-width: 450px;
-            width: 100%;
-            background: rgba(15, 22, 36, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-            position: relative;
-        }
+	.home-btn:hover {
+		color: #00f2fe;
+		border-color: rgba(0, 242, 254, 0.3);
+		background: rgba(0, 242, 254, 0.05);
+	}
 
-        /* Coperta centrală */
-        .artwork-wrapper {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 25px auto;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            overflow: hidden;
-        }
+		/* Coperta centrală */
+	.artwork-wrapper {
+		width: 189px;
+		height: 189px;
+		margin: 0 auto 9px auto;
+		border-radius: 1px;
+		box-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		overflow: hidden;
+	}
 
-        .artwork-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+	.artwork-wrapper img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
 
-        /* Stil special pentru textul de îndemn centrat */
-        .play-now-text {
-            font-size: 0.95rem;
-            color: #94a3b8;
-            margin-bottom: 15px;
-            text-align: center; /* Centrare exactă solicitată */
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
+		/* Stil special pentru textul de îndemn centrat */
+	.play-now-text {
+		font-size: 0.95rem;
+		color: #94a3b8;
+		margin-bottom: 5px;
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: 0.5px;
+	}
 
-        .description {
-            font-size: 0.92rem;
-            color: #94a3b8;
-            line-height: 1.6;
-            margin-top: 25px;
-            text-align: justify;
-        }
+	.description {
+		font-size: 0.92rem;
+		color: #94a3b8;
+		line-height: 1.6;
+		margin-top: 16px;
+		text-align: justify;
+	}
 
-        /* CONTAINER NOU PICTOGRAME: ALINIATE DE LA UN CAPĂT LA ALTUL */
-        .stream-icons {
-            display: flex;
-            justify-content: space-between; /* Împinge pictogramele dintr-un capăt în altul */
-            align-items: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 20px;
-            margin-bottom: 10px;
-            width: 100%;
-        }
+	.stream-icons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
+		padding-top: 16px;
+		margin-bottom: 0px;
+		width: 100%;
+	}
 
-        .stream-icons a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+	.stream-icons a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-        .stream-icons a img {
-            width: 24px; /* Puțin mai mari pentru a fi ușor de apăsat pe telefon */
-            height: 24px;
-            filter: grayscale(100%) brightness(0.8);
-            transition: all 0.3s ease;
-        }
+	.stream-icons a img {
+		width: 24px;
+		height: 24px;
+		filter: grayscale(100%) brightness(0.8);
+		transition: all 0.3s ease;
+	}
         
-        .stream-icons a img:hover {
-            filter: grayscale(0%) brightness(1);
-            transform: scale(1.2);
-        }
+	.stream-icons a img:hover {
+		filter: grayscale(0%) brightness(1);
+		transform: scale(1.2);
+	}   
         
-        /* CONTAINER BUTOANE NAVIGARE */
-        .navigation-row {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 25px;
-            width: 100%;
-        }
-
-        .home-btn {
-            flex: 1;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.01);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.2s ease;
-        }
-
-        .home-btn:hover {
-            color: #00f2fe;
-            border-color: rgba(0, 242, 254, 0.3);
-            background: rgba(0, 242, 254, 0.05);
-        }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 0.75rem;
-            color: #475569;
-            letter-spacing: 1px;
-        }
+	.footer {
+		margin-top: 6px;
+		font-size: 0.75rem;
+		color: #475569;
+		letter-spacing: 1px;
+		margin-left: 1px;
+	}
         
-    </style>
+</style>
 </head>
 <body>
 
