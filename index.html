@@ -51,9 +51,18 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			justify-content: center;
 			min-height: 100vh;
 			margin: 0;
-			padding: 40px 0px; /* Am lăsat 0 pe lateral pentru a controla spațiul strict din container */
+			padding: 40px 0px 20px 0px; 
 			position: relative;
 			overflow-x: hidden;
+	}
+
+	.main-wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			flex: 1; /* Prelucrează spațiul liber și împinge footer-ul la baza ecranului */
 	}
 
 	body::before {
@@ -63,6 +72,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			left: 0;
 			width: 100%; 
 			height: 100%;
+			
 			background-size: cover;
 			filter: brightness(0.4) contrast(1.1); 
 			z-index: -1;
@@ -110,7 +120,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			padding: 20px 20px;            
 			border: 1px solid rgba(29, 185, 84, 0.6);
             border-radius: 8px; 
-            font-size: 14px;
+            font-size: 8px;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -214,12 +224,14 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 
 <body>
 
-    <div class="container">
+	<div class="main-wrapper">
+
+		<div class="container">
 			
 			<h1>KENN <br> LONER</h1>
 			
 			<hr class="modest-line">
-				<a href="releases/goldenhorizon/" target="_blank" class="presave-button">
+			<a href="releases/goldenhorizon/" target="_blank" class="presave-button">
 				New Release!
 				<br>"Golden Horizon" 
 				
@@ -229,11 +241,12 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			<a href="releases/" class="releases">
 				RELEASES
 			</a>
-
+			
 			<hr class="modest-line">
 			
+	</div>		
 			
-    </div>
+		</div>
 	
 	<div class="footer">
 
