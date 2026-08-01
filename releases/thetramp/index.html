@@ -39,7 +39,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 		color: #ffffff;
 		display: flex;
 		flex-direction: column;
-		justify-content: center; /* Centrat pe PC */
+		justify-content: center; 
 		align-items: center;
 		min-height: 100vh;
 		padding: 0;
@@ -57,9 +57,9 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 		background-image: url('../../img/coverart/thetrampcover.jpg');
 		background-size: cover;
 		background-position: center;
-		filter: blur(25px) brightness(0.3) contrast(1.1); /* Blur crescut pentru efect smooth */
+		filter: blur(20px) brightness(0.3) contrast(1.1); /* Blur crescut pentru efect smooth */
 		transform: scale(1.05);
-		z-index: 0; /* Schimbat din -1 în 0 pentru a fi vizibil garantat peste body dar sub container */
+		z-index: 0; 
 		pointer-events: none;
 	}
 
@@ -71,16 +71,16 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 		background: radial-gradient(circle at center, rgba(0, 242, 254, 0.1) 0%, rgba(0, 0, 0, 0.6) 90%);
 	}
 
-		/* Asigură-te că containerul stă PESTE fundalul blurat */
+		
 	.container {
 		position: relative;
 		z-index: 1;
 		max-width: 450px;
 		width: 100%;
-		background-color: rgba(0, 0, 0, 0.85); /* Un pic mai translucid pentru efectul de sticlă */
+		background-color: rgba(0, 0, 0, 0.85); 
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
-		padding: 9px 23px;
+		padding: 9px 26px;
 		text-align: center;
 		box-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
 	}
