@@ -34,7 +34,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 /></noscript>
 								<!-- End Meta Pixel Code -->
 <style>
-	/* REPARAȚIA ELEMENTARĂ: Menține padding-ul în interiorul celor 100% și centrează tot */
+	/* RESETARE GLOBALĂ: Împiedică butoanele să iasă din ecran și rezolvă marginile */
 	* {
 			box-sizing: border-box;
 			margin: 0;
@@ -42,7 +42,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 	}
 
 	body {
-			background-color: #0b0e14;
+			background-color: #000000;
 			color: #ffffff;
 			font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
 			display: flex;
@@ -51,166 +51,172 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			justify-content: center;
 			min-height: 100vh;
 			margin: 0;
-			padding: 40px 0px; /* Am lăsat 0 pe lateral pentru a controla spațiul strict din container */
-			position: relative;
+			padding: 40px 0px;
 			overflow-x: hidden;
 	}
 
-	body::before {
-			content: "";
-			position: fixed;
-			top: 0; 
-			left: 0;
-			width: 100%; 
-			height: 100%;
-			
-			background-size: cover;
-			filter: brightness(0.4) contrast(1.1); 
-			z-index: -1;
-			transform: scale(1.05);
+	/* CONTAINER PERFECT CENTRAT */
+	.container {
+			max-width: 440px;
+			width: 90%;
+			text-align: center;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 	}
-
-    /* ALINIERE FIXĂ: Forțează containerul să stea pe mijlocul ecranului cu margini egale */
-    .container {
-            max-width: 440px;
-            width: 90%;
-            text-align: center;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-    }
 
 	h1 {
 			font-size: 42px;
 			font-weight: 900;
 			letter-spacing: 14px;
 			line-height: 0.95;
-			margin-bottom: 12px;
-		    text-transform: uppercase;
-            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            width: 100%;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+			width: 100%;
 	}
-	
+		
+	p { 
+			color: #ffffff; 
+			font-weight: 300; 
+			letter-spacing: 5px; 
+			margin-bottom: 10px; 
+			font-size: 9px; 
+			line-height: 1.2;
+			text-transform: uppercase;
+	}
+				
 	.modest-line {
 			border: 0;
 			height: 1px;
-			background: rgba(255, 255, 255, 0.1);
-			width: 100%;      
-			margin: 9px auto;
+			background: #222222; 
+			width: 60px;      
+			margin: 10px auto;
 	}
-	
-    /* GLOW BUTTON - COMPLET CENTRAT ȘI CONSTRÂNS SĂ NU DEPĂȘEASCĂ MARGINILE */
-    .presave-button {
-            display: block;
-            width: 100%; 
-            background: rgba(29, 185, 84, 0.04);
-            color: #ffffff;
-            text-decoration: none;
-			line-height: 1.6;
-			padding: 20px 20px;            
-			border: 1px solid rgba(29, 185, 84, 0.6);
-            border-radius: 8px; 
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 3px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(29, 185, 84, 0.1);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-	
-    .presave-button:hover {
-			transform: translateY(-3px);
-            border-color: rgba(29, 185, 84, 1);
-            background: rgba(29, 185, 84, 0.12);
-			box-shadow: 0 0 25px rgba(29, 185, 84, 0.45), inset 0 0 8px rgba(29, 185, 84, 0.2);
-	}
-		
-	.presave-button span {
-			font-size: 9px;
-			opacity: 0.8;
-			font-weight: 300;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-top: 3px;
-            color: #00f2fe; 
+				
+	.btn-vector {
+			display: flex;
+			flex-direction: column;
+			gap: 1px;
+			margin: 1px 0;
+			width: 100%;
 	}
 
-	/* RELEASES BUTTON - FLUID ȘI PERFECT SIMETRIC */
-	.releases {
+	/* STILUL DE BAZĂ CURAT (Acum aplicat implicit și pentru butonul Home) */
+	.custom-btn {
 			display: block;
-            width: 100%; 
-			background-color: rgba(255, 255, 255, 0.02);
+			width: 100%;
+			background-color: transparent; 
 			color: #ffffff;
 			text-decoration: none !important;
-			padding: 12px 12px;
-			border: 1px solid rgba(255, 255, 255, 0.15);
-			border-radius: 8px;
-			font-size: 12px;
-			font-weight: 600;
-			letter-spacing: 3px;
+			padding: 16px 25px;
+			border: 1px solid #333333; 
+			border-radius: 8px; /* Rotunjire fină la fel ca pe prima pagină pentru simetrie */
+			font-size: 11px;
+			font-weight: 300;
+			letter-spacing: 4px;
 			text-transform: uppercase;
 			transition: all 0.3s ease;
-			margin-bottom: 3px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 	}
 
-	.releases:hover {
-			background-color: rgba(255, 255, 255, 0.06);
-			border-color: #00f2fe; 
+	.custom-btn:hover {
+			background-color: rgba(255, 255, 255, 0.05); 
+			border-color: #ffffff; 
 			color: #ffffff;
-			box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
 			transform: translateY(-2px);
 	}
 
-    .social-icons {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-			gap: 20px;
-			border-top: 1px solid rgba(255, 255, 255, 0.08);
-            padding-top: 30px;
-            margin-top: 20px;
-            width: 100%;
-    }
+													/* ACCENTUL VERDE SPOTIFY SHINE MUTAT PE PIESA LANSATĂ (THE TRAMP) */
+	.custom-btn.release-active {
+			border-color: #1DB954;
+			font-weight: 700; 							/* Text mai definit ca să iasă în evidență */
+	}
 
-    .social-icons a img {
-            width: 20px;
-            height: 20px;
-            filter: grayscale(100%) brightness(0.8);
-            transition: all 0.4s ease;
-    }
-    
-    .social-icons a img:hover {
-            filter: grayscale(0%) brightness(1);
-            transform: scale(1.15);
-    }
+	.custom-btn.release-active:hover {
+			background-color: rgba(29, 185, 84, 0.1);
+			border-color: #ffffff;
+			box-shadow: 0 0 15px rgba(29, 185, 84, 0.3);
+	}
+
+												/* SPAȚIERE BUTON HOME (RĂMÂNE SIMPLU) */
+	.home-space {
+			margin-top: 10px;
+			width: 100%;
+	}
+	
+	.stay-tuned {
+			padding: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			font-size: 16px;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			font-weight: 300;
+			line-height: 1.5;
+			animation: sparkle 1.5s infinite alternate;
+	}
+
+	@keyframes sparkle {
+			0% {
+				color: #ffffff; 
+				text-shadow: 0 0 5px #ffffff;
+			}
+			100% {
+				color: #ffd700; 
+				text-shadow: 0 0 10px #ffd700; 
+			}
+	}
+	
+	.social-icons {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 20px; 
+			border-top: 1px solid #1a1a1a;
+			padding-top: 30px;
+			margin-top: 20px;
+			width: 100%;
+	}
+
+	.social-icons a img {
+			width: 20px;
+			height: 20px;
+			filter: grayscale(100%);
+			opacity: 0.6;
+			transition: all 0.4s ease;
+	}
+	
+	.social-icons a img:hover {
+			filter: grayscale(0%); 
+			opacity: 1;
+			transform: scale(1.15);
+	}
 		
-    .footer {
-			margin-top: 30px;
+	.footer {
+			margin-top: 35px; 
 			font-size: 8px;
-			color: #55637a;
+			color: #666666; 
 			letter-spacing: 2px;
 			text-transform: uppercase;
-    }
+	}
 	
 	.legal-links {
-			margin-top: 12px;
+			margin-top: 10px;
 			font-size: 7px;
 			opacity: 0.5;
 	}
 	
 	.legal-links a {
-			color: #94a3b8;
-			text-decoration: none;
-			margin: 0 6px;
-            transition: color 0.2s;
-	}
-	
-	.legal-links a:hover {
 			color: #ffffff;
-	}				
+			text-decoration: none;
+			margin: 0 5px;
+			transition: opacity 0.2s;
+	}
+
+	.legal-links a:hover {
+			opacity: 1;
+			text-decoration: underline;
+	}               
 </style>
 </head>
 
