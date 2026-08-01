@@ -33,7 +33,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 /></noscript>
 								<!-- End Meta Pixel Code -->
     <style>
-	
+	/* RESETARE GLOBALĂ: Împiedică butoanele să iasă din ecran și rezolvă marginile */
 	* {
 			box-sizing: border-box;
 			margin: 0;
@@ -53,16 +53,15 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			padding: 10px 0px 10px 0px;
 			overflow-x: hidden;
 	}
-
+	
 	.main-wrapper {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-			flex: 1;
+			flex: 1; /* Prelucrează spațiul liber și împinge footer-ul la baza ecranului */
 	}
-		
 	.container {
 			max-width: 440px;
 			width: 96%;
@@ -74,18 +73,20 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 	}
 
 	h1 {
+			padding: 16px 16px;
 			font-size: 42px;
 			font-weight: 900;
 			letter-spacing: 14px;
 			margin-left: 14px;
 			line-height: 0.95;
-			margin-bottom: 5px;
+			margin-bottom: 0px;
 			text-transform: uppercase;
 			width: 100%;
 	}
 		
 	p { 
-			color: #ffffff;
+			padding: 16px 16px;
+			color: #ffffff; 
 			font-weight: 600; 
 			letter-spacing: 29px;
 			margin-left: 29px;
@@ -111,7 +112,6 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			width: 100%;
 	}
 
-	
 	.custom-btn {
 			display: block;
 			width: 100%;
@@ -149,9 +149,9 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 	}
 	
 	.stay-tuned {
-			padding: 10px;
-			margin-top: 10px;
-			margin-bottom: 10px;
+			padding: 10px 10px;
+			margin-top: 0px;
+			margin-bottom: 0px;
 			font-size: 23px;
 			letter-spacing: 19px;
 			margin-left: 19px;
@@ -162,33 +162,30 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 	}
 
 	@keyframes sparkle {
-			
-		0% {
+			0% {
 				color: #ffffff; 
 				text-shadow: 0 0 5px #ffffff;
 			}
-			
-		100% {
+			100% {
 				color: #ffd700; 
 				text-shadow: 0 0 10px #ffd700; 
 			}
 	}
-			
-	 .footer {
-			margin-top: 33px;
+		
+	.footer {
+			margin-top: 0px;
 			font-size: 10px;
 			color: #55637a;
 			letter-spacing: 2px;
-		 	margin-left: 2px;
+			margin-left: 2px;
 			text-transform: uppercase;
     }
-
+	
 	.social-icons {
 			display: flex;
             justify-content: center;
             gap: 22px;
-            padding-top: 15px;
-			padding-bottom: 15px;
+            padding: 16px;
             flex-wrap: wrap;
             width: 100%;
 	}
@@ -204,9 +201,10 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 			filter: grayscale(0%) brightness(1);
             transform: scale(1.15);
 	}
-		
+	
 	.legal-links {
-			margin-top: 12px;
+			padding: 16px 16px;
+			margin-top: 0px;
 			font-size: 9px;
 			opacity: 0.5;
 	}
@@ -214,7 +212,7 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 	.legal-links a {
 			color: #ffffff;
 			text-decoration: none;
-			margin: 0 5px;
+			margin: 0 6px;
 			transition: opacity 0.2s;
 	}
 
