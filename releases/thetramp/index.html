@@ -80,17 +80,52 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-radius: 0px;
-            padding: 23px;
+            padding: 9px 16px 9px 16px;
             text-align: center;
             box-shadow: 0 20px 20px rgba(0, 0, 0, 0.6);
             position: relative;
         }
+        
+/* CONTAINER BUTOANE NAVIGARE */
+        .navigation-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+			padding: 0px 0px 9px 0px;
+            width: 100%;
+        }
 
-        /* Coperta centrală */
+        .home-btn {
+            flex: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 9px;
+            font-weight: 900;
+            padding: 9px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1px;
+            background: rgba(255, 255, 255, 0.01);
+            text-transform: uppercase;
+            letter-spacing: 6px;
+			margin-left: 0px;
+			text-indent: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .home-btn:hover {
+            color: #00f2fe;
+            border-color: rgba(0, 242, 254, 0.3);
+            background: rgba(0, 242, 254, 0.05);
+        }
+
+			/* Coperta centrală */
         .artwork-wrapper {
             width: 189px;
             height: 189px;
-            margin: 0 auto 16px auto;
+            margin: 0 auto 9px auto;
             border-radius: 1px;
             box-shadow: 0 3px 16px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -149,42 +184,8 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
         .stream-icons a img:hover {
             filter: grayscale(0%) brightness(1);
             transform: scale(1.2);
-        }
+        }   
         
-        /* CONTAINER BUTOANE NAVIGARE */
-        .navigation-row {
-            display: flex;
-            justify-content: center;
-            gap: 3px;
-            margin-bottom: 16px;
-            width: 100%;
-        }
-
-        .home-btn {
-            flex: 1;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 1px;
-            background: rgba(255, 255, 255, 0.01);
-            text-transform: uppercase;
-            letter-spacing: 6px;
-			margin-left: 6px;
-            transition: all 0.2s ease;
-        }
-
-        .home-btn:hover {
-            color: #00f2fe;
-            border-color: rgba(0, 242, 254, 0.3);
-            background: rgba(0, 242, 254, 0.05);
-        }
-
         .footer {
             margin-top: 6px;
             font-size: 0.75rem;
