@@ -28,7 +28,13 @@ src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1"
 								<!-- End Meta Pixel Code -->
 	
     <style>
-        * {
+        html {
+			/* Oprește efectul de elasticitate (bounce) la scroll pe iOS / Android */
+			overscroll-behavior: none;
+			background-color: #000000;
+		} 
+		
+		* {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
