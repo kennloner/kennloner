@@ -173,27 +173,41 @@
 				transform: translateY(-2px);
 			}
 			.stay-tuned {
-				padding: 16px 16px;
-				margin-top: 0px;
-				margin-bottom: 0px;
+				padding: 16px 0;
+				margin: 0;
 				font-size: 21px;
-				letter-spacing: 19px;
-				margin-left: 19px;
+				letter-spacing: 14px;
+				text-indent: 14px;
 				text-transform: uppercase;
 				font-weight: 600;
-				line-height: 1.5;
-				animation: sparkle 1.5s infinite alternate;
+				display: inline-block;
 			}
-		@keyframes sparkle {
-			0% {
-				color: #ffffff; 
-				text-shadow: 0 0 5px #ffffff;
+			.stay-tuned span {
+				display: inline-block;
+				animation: waveMotion 2s infinite ease-in-out alternate;
 			}
-			100% {
-				color: #ffd700; 
-				text-shadow: 0 0 10px #ffd700; 
+			.stay-tuned span:nth-child(1) { animation-delay: 0.0s; }
+				.stay-tuned span:nth-child(2) { animation-delay: 0.2s; }
+				.stay-tuned span:nth-child(3) { animation-delay: 0.4s; }
+				.stay-tuned span:nth-child(4) { animation-delay: 0.1s; }
+				.stay-tuned span:nth-child(5) { animation-delay: 0.5s; }
+				.stay-tuned span:nth-child(6) { animation-delay: 0.3s; }
+				.stay-tuned span:nth-child(7) { animation-delay: 0.6s; }
+				.stay-tuned span:nth-child(8) { animation-delay: 0.2s; }
+				.stay-tuned span:nth-child(9) { animation-delay: 0.4s; }
+
+			@keyframes waveMotion {
+				0% {
+					transform: translateY(0px) rotate(0deg);
+					color: #ffffff;
+					text-shadow: 0 0 5px #ffffff;
+				}
+				100% {
+					transform: translateY(-4px) rotate(1.5deg); /* Mișcare mică în sus și o ușoară înclinare */
+					color: #ffd700;
+					text-shadow: 0 0 12px #ffd700;
+				}
 			}
-		}
 			footer {
 			width: 96%;
 				max-width: 440px;
@@ -252,7 +266,10 @@
                 THE TRAMP
             	</a>
 				<hr class="line">
-        		<p class="stay-tuned">Stay Tuned</p>
+        		<p class="stay-tuned">
+					<span>S</span><span>T</span><span>A</span><span>Y</span> 
+					<span>T</span><span>U</span><span>N</span><span>E</span><span>D</span>
+				</p>
 				<hr class="line">
 				<a href="../" class="mainstage-button">
             	MAIN STAGE
