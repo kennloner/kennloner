@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Kenn Loner | Throwback</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:image" content="../../img/coverart/throwbackcover.jpg">
+		<meta property="og:url" content="https://kennloner.com/releases/throwback">
+		<link rel="icon" type="image/png" href="https://kennloner.com/img/coverart/throwbackcover.jpg">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kenn Loner | Throwback">
+		<meta name="twitter:description" content="Pre-Save on Spotify.">
+		<meta name="twitter:image" content="https://kennloner.com/img/coverart/throwbackcover.jpg">		
+<!-- Meta Pixel Code -->
+		<script>
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t,s)}(window, document,'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1333642738823803');
+			fbq('track', 'PageView');
+		</script>
+		<noscript>
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1333642738823803&ev=PageView&noscript=1" />
+		</noscript>
+<!-- Meta Pixel Code -->	
+
+		<style>
+			* { box-sizing: border-box; margin: 0; padding: 0; }
+			body {
+				background: #000;
+				color: #fff;
+				font-family: 'Montserrat';
+				min-height: 100dvh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 12px;
+			}
+/* Fundal blurat */
+			.blurred-bg {
+				position: fixed;
+				inset: -5%;
+				background: url('../../img/coverart/throwbackcover.jpg') center/cover;
+				filter: blur(5px) brightness(0.55);
+				z-index: 0;
+				pointer-events: none;
+			}
+			.container {
+				position: relative;
+				z-index: 1;
+				width: 100%;
+				max-width: 440px;
+				background: rgba(0, 0, 0, 0.45);
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 1px;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 9px;
+				text-align: center;
+				margin: auto 0;
+			}
+
+/* Navigare */
+			.nav-row {
+				display: flex;
+				gap: 8px;
+				width: 100%;
+			}
+			.nav-row a {
+				flex: 1;
+				padding: 8px;
+				color: #94a3b8;
+				text-decoration: none;
+				font-size: 10px;
+				font-weight: 800;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				white-space: nowrap;
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 3px;
+				transition: 0.2s;
+			}
+			.nav-row a:hover { color: #00f2fe; border-color: rgba(0, 242, 254, 0.4); }
+/* Copertă */
+			.artwork {
+				width: 180px;
+				height: 180px;
+				border-radius: 3px;
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				object-fit: cover;
+			}
+
+/* Iconițe Streaming */
+			.stream-icons {
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				padding: 6px 0;
+			}
+			.stream-icons img {
+				width: 20px;
+				height: 20px;
+				filter: grayscale(100%) brightness(0.85);
+				transition: 0.2s;
+			}
+			.stream-icons img:hover { filter: none; transform: scale(1.15); }
+/* Detalii Piesă */
+			.track-details {
+				font-size: 0.83rem;
+				color: #94a3b8;
+				line-height: 1.5;
+				text-align: left;
+				display: flex;
+				flex-direction: column;
+				gap: 3px;
+			}
+/* Footer */
+			footer {
+				position: relative;
+				z-index: 1;
+				margin-top: auto;
+				padding-top: 12px;
+				font-size: 0.7rem;
+				color: #94a3b8;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+			}
+			footer a { color: #fff; text-decoration: none; opacity: 0.5; }
+			footer a:hover { opacity: 1; }
+        
+			.presave-button {
+				display: block;
+				width: 100%; 
+				background: rgba(29, 185, 84, 0.04);
+				color: #ffffff;
+				text-decoration: none;
+				line-height: 1.6;
+				padding: 16px 0px;            
+				border: 1px solid rgba(29, 185, 84, 0.6);
+				border-radius: 8px; 
+				font-size: 8px;
+				font-weight: 600;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(29, 185, 84, 0.1);
+				transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+	
+			.presave-button:hover {
+					transform: translateY(-3px);
+					border-color: rgba(29, 185, 84, 1);
+					background: rgba(29, 185, 84, 0.12);
+					box-shadow: 0 0 25px rgba(29, 185, 84, 0.45), inset 0 0 8px rgba(29, 185, 84, 0.2);
+			}
+		
+			.presave-button span {
+					font-size: 9px;
+					opacity: 0.8;
+					font-weight: 300;
+					letter-spacing: 1px;
+					display: inline-block;
+					margin-top: 3px;
+					color: #00f2fe; 
+			}
+		
+		</style>
+	</head>
+	<body>
+<div class="blurred-bg"></div>
+			<div class="container">
+				<nav class="nav-row">
+					<a href="../../" onclick="fbq('track', 'ViewContent', {content_name: 'Main Stage'})";>KENN LONER</a>
+					<a href="../../releases/" onclick="fbq('track', 'ViewContent', {content_name: 'Releases'})";>RELEASES</a>
+				</nav>
+				<iframe src="https://show.co/social-unlock/0lOUj90X2Sh5bchdwEggKh/widget" width="300" height="300" frameborder="0"></iframe>
+				<div class="track-details">
+					<p><strong>Produced, Mixed, and Mastered by:</strong> Kenn Loner</p>
+					<p><strong>Release date:</strong> September 18, 2026</p>
+					<p>"Throwback" is a deeply atmospheric Progressive House track built around a hypnotic groove and evolving soundscapes.</p>
+					<p> Designed with a single, seamless buildup, the track features a muted piano opening that gradually unveils its brilliance alongside ambient pads and a rich, arpeggiated bassline.</p>
+					<p> Post-drop, the rhythm expands with off-beat organ elements, high-frequency synth textures, and intricate syncopated accents that keep the energy moving.</p>
+				</div>
+			</div>
+		<footer>
+			<p>© 2026 KENN LONER RECORDS. All rights reserved.</p>
+			<div>
+				<a href="../privacy.html" onclick="fbq('track', 'ViewContent', {content_name: 'Privacy'})">Privacy Policy</a> |
+				<a href="../terms.html" onclick="fbq('track', 'ViewContent', {content_name: 'Term of Use'})">Terms of Use</a> |
+				<a href="../cookies.html" onclick="fbq('track', 'ViewContent', {content_name: 'Cookies'})">Cookies Settings</a>
+			</div>
+		</footer>
+	</body>
+</html>
